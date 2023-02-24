@@ -1,0 +1,19 @@
+def numerosproi():
+    try: 
+        a=int(input("ponga: "))
+        ae =[2001,9,11,777,666]
+        if a in ae:
+            print(a, "esta prohibido en mi sistema")
+        elif a not in ae:
+            print("usted dijito",a)
+    except ValueError:
+        print("no admito  ese valor",a)
+    except:
+        print("me perdi")
+        
+
+#numerosproi()
+def fuchi():
+    fuchibol={"mesi":"el mejor","cristiano":"traiciono al real","falcao":"el tigre toño","james":" de de de me me medelin"}
+    for i ,j in fuchibol:
+        print()
