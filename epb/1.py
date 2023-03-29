@@ -1,12 +1,10 @@
 
-#ob2.getpedido() 
-#print(ob2.setordeon("malono y sus amigos "))
-#ob2.getpedido() 
 class pedido:
     def __init__(self,iduso):
         self.__id=iduso
-        self.libros=[]
+       
         print()
+        self.libros=[]
 
     def getpedido(self):
         id=self.__idusu
@@ -15,6 +13,9 @@ class pedido:
         print("s codigo personal es:",id,"\nel titulo del libro es :",tdm,"\ncodigo correspondiente :")
     
     def agregarlibro(self,titulod,tipod,auto,editorial,codigolibro):#son 4 y me esta conatando el self
+        
+         
+        self.libros=[]
         self.__codigolibro=codigolibro
         self.__titulod=titulod
         self.__tipod=tipod
@@ -24,52 +25,59 @@ class pedido:
         print(self.libros,"fue prestado a:", self.__id," el libro con el codigo :",self.__codigolibro)
        
 
-class libro(pedido):
+
+#li=libro("ertor","musica","ector","pana bock",150)
+#li2=material("manu y sus amigos ","comedia ","ector manuel", "colomnian bucks",8383)
+#li.getlibro()
+#li2.getlibro()
+#p1=pedido(10199)
+#p1.agregarlibro("ertor","musica","ector","pana bock",150)
+
+class libros(pedido):
     def __init__(self,titulodl,tipodl,autor,editorisl,codigolibro):
-        #super().__init__(titulodl,tipodl,autor,editorisl)
         self.__codigolibro=codigolibro
         self.__tipodl=tipodl
-        self.__autor=autor
+        self.__autorr=autor
         self.__editorisl=editorisl
         self.__titulodl=titulodl
         self.__listl=[]
-
-    def getlibro(self): 
-        codigoo=self.__codigolibro
-        tiulo=self.__titulodl
-        tipo=self.__tipodl
-        autor=self.__autor
-        editorial=self.__editorisl
-        print("el libro :",tiulo,"\ntipo de libro :",tipo,"\nel autor del libro :",autor,"\nsu editorial :",editorial,"su cofigo unico",codigoo)
-        self.__listl.append(tiulo)
-        #print(self.__listl)
-        return self.__titulodl
-    def agregarlibro(self,titulod,tipod,auto,editorial):
-        #super().agregarlibro(titulod,tipod,auto,editorial)
-        super().__init__(titulod,tipod,auto,editorial)
-
-
-#li=libro("ertor la voz","musica","ector","pana bock",150)
-#li2=libro("manu y sus amigos ","comedia ","ector manuel", "colomnian bucks",8383)
-#li.getlibro()
-#print()
-#li2.getlibro()
-#p1=pedido(123)
-#p1.agregarlibro("ertor la voz","musica","ector","pana bock",150)
-"""
-class revsita(pedido):
-    def __init__(self,titulor,tipor,autorr,edicion):
-        self.__titulor=titulor
-        self.__tipor=tipor
-        self.__autorr=autorr
-        self.__edicion=edicion
-        #super().getpedido()
-
-    def getprevist(self):
-        ti=self.__titulor
-"""
+    def verlibro(self,titulodl,tipodl,autor,editorisl,codigolibro):
+        codl=self.__codigolibro
+        tipol=self.__tipodl
+        autor=self.__autorr
+        edito=self.__editorisl
+        T=self.__titulodl
+        print("el libro es : ",T,"el tipo de libro es :",tipol,"su codigo corespondiente es :",codl," su autor :",autor," su editorial :",edito)
+    def setlibro(self,titulodl):
+        edin=titulodl
+        self.__titulodl=titulodl
+        print("nombre a cambiar :",edin,"usted cambio su nombre a ",self.__titulodl)
+        
+        
+class revista(pedido):
+    def __init__(self,titulodl,tipodl,autor,edicion,codigolibro):
+        self.__codigolibro=codigolibro
+        self.__tipodl=tipodl
+        self.__autorr=autor
+        self.__editorisl=edicion
+        self.__titulodl=titulodl
+        self.__listl=[]
+    def verrevista(self):
+        codl=self.__codigolibro
+        tipol=self.__tipodl
+        autorr=self.__autorr
+        edito=self.__editorisl
+        T=self.__titulodl
+        print("el libro es : ",T,"el tipo de libro es :",tipol,"su codigo corespondiente es :",codl," su autor :",autorr," su editorial :",edito)
+    def setrevista(self,titulodl):
+        edin=titulodl
+        self.__titulodl=titulodl
+        print("nombre a cambiar :",edin,"usted cambio su nombre a :",self.__titulodl)
+        
+        
 class lector :
     def __init__(self,nombre,direcion,telefono):
+        
         self.__nombre=nombre
         self.__direcion=direcion
         self.__telefono=telefono
@@ -96,9 +104,11 @@ class lector :
         nt=self.__telefono
         self.__telefono=nomerot
         print(" su numero antiguo es es:",nt,"usted tiene este nuevo numero",self.__telefono)
+    def getNombre(self):
+        return self.__nombre
 
 
-        
+"""     
 ob1=lector("manolo","calle11",310)  
 
 
@@ -110,11 +120,16 @@ print()
 ob1.moddi("calle 10")
 print()
 ob1.telmodi(122)
+"""
 
 class estudiante(lector):
-    def __init__(self,codigoes):
+    def __init__(self,nombre,direcion,telefono,codigoes):
+        lector.__init__(self,nombre,direcion,telefono)
         self.__cestudi=codigoes
-
+        
+    # def verlec(self):
+    #     return self.__nombre
+    #     
         
     def getestu(self):
         return self.__cestudi
@@ -145,11 +160,67 @@ class docente(lector):
         print("la revista :",tipO,"\ntipo de revista :",tipO,"\nel autor del libro :",au,"\nsu editorial :",edi)
         #super().__init__(self)
        
-    def setordeon(sefl,titulolibro):
+    def setordeon(self,titulolibro):
 
-        sefl.__titulom=titulolibro
+        self.__titulom=titulolibro
         super().setordeon(titulolibro)
         #return sefl.__titulom
-        return super().setordeon(sefl.__titulom)
+        return super().setordeon(self.__titulom)
 
-       
+
+def Biblioteca (var):
+    print('1- Crear')
+    print('2- Consulatr')
+    while True:
+        ctrl=str (input("Seleciona una opcion: "))
+        match ctrl:
+            case '1':
+                print()
+                print('1- crear estudiante')
+                print('2- crear Docente')
+                print('3-Crear libro')
+                print('4-Crear revista')
+                print('5-Crear bibliotecario')
+                ctrl2=str (input("Seleciona una opcion: "))
+                match ctrl2:
+                    case '1':
+                        c1=str(input('Nombre del estudiante: '))
+                        c2=str(input('Dirección del estudiante: '))
+                        c3=str(input('Telefono del estudiante: '))
+                        c4=str(input('id del estudiante: '))
+                        var=estudiante(c1,c2,c3,c4)
+                    case '2':
+                        c1=str(input('Nombre del Docente: '))
+                        c2=str(input('Dirección del Docente: '))
+                        c3=str(input('Telefono del Docente: '))
+                        var=docente(c1,c2,c3)
+                    case '3':
+                        c1=str(input('Nombre del biblo: '))
+                        c2=str(input('Dirección del Docente: '))
+                        c3=str(input('Telefono del Docente: '))
+                        var=(c1,c2,c3)
+            case '2':
+                print()
+                print('1-ver estudiante')
+                print('2- ver Docente')
+                print('3- ver libro')
+                print('4- ver revista')
+                print('5- ver bibliotecario')
+                ctrl3=str (input("Seleciona una opcion: "))
+                match ctrl3:
+                    case '1':
+                        var.verlec()
+                    case '2':
+                        pass
+                    case '3':
+                        pass
+                
+            case '3':
+                break
+            
+        
+
+c=""
+Biblioteca(c)
+    
+

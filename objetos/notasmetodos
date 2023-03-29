@@ -1,0 +1,66 @@
+artivuro-estsfo 
+metod-- comportamiento
+
+
+
+metodo parasaber las variables de instyacia
+.__dict__()
+tambien dice lo que tiene una clase o objeto 
+
+Coloca un nombre de clase antes de tu nombre.
+Coloca un guión bajo adicional al principio.
+Es por ello que __first se convierte en _ExampleClass__first.
+
+El nombre ahora es completamente accesible desde fuera de la clase. Puedes ejecutar un código como este:
+
+
+como instaciar una varaible de clase 
+
+class Stack:
+    __conadorpop1=0
+    __conadorpush1=0
+    def funcion(self)
+        Stack.__conadorpop1=0
+
+python proporciona una función que puede verificar con seguridad si algún objeto / clase contiene una propiedad específica. La función se llama hasattr, y espera que le pasen dos argumentos:
+
+print(objeto,nombre para serb si ese argumento lo tine o metodo )
+
+class Sample:
+    gamma = 0 # Class variable.
+    def __init__(self):
+        self.alpha = 1 # Variable de instancia.
+        self.__delta = 3 # Variable de instancia privada.
+
+Si vas a invocar un método, no debes pasar el argumento para el parámetro self, Python lo configurará por ti.
+
+Si se nombra un método de esta manera: __init__, no será un método regular, será un constructor.
+
+obj = Sample()
+obj.beta = 2  # Otra variable de instancia (que existe solo dentro de la instancia "obj").
+print(obj.__dict__)
+
+Ya conoces uno de estos: es la propiedad __dict__.
+
+Observemos como esta propiedad trata con los métodos: mira el código en el editor.
+
+Ejecútalo para ver que produce. Verifica el resultado.
+
+Encuentra todos los métodos y atributos definidos. Localiza el contexto en el que existen: dentro del objeto o dentro de la clase.
+
+Nota: el atributo __name__ está ausente del objeto, existe solo dentro de las clases.
+
+Si deseas encontrar la clase de un objeto en particular, puedes usar una función llamada type(), la cual es capaz (entre otras cosas) de encontrar una clase que se haya utilizado para crear instancias de cualquier objeto.
+print(type(obj).__name__)
+
+
+__module__ es una cadena, también almacena el nombre del módulo que contiene la definición de la clase.
+Como sabes, cualquier módulo llamado __main__ en realidad no es un módulo, sino es el archivo actualmente en ejecución.
+
+Te mostraremos solo un ejemplo muy básico, ya que queremos resaltar cómo funciona la herencia.
+
+Además, te mostraremos cómo usar este atributo cuando discutamos los aspectos orientados a objetos de las excepciones.
+
+Nota: solo las clases tienen este atributo, los objetos no.
+
+Hemos definido una función llamada printBases(), diseñada para presentar claramente el contenido de la tupla.

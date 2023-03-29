@@ -7,7 +7,7 @@ class Persona1:#creo clase persona osea clase padre la principal
         self.__cedu1=cedu
         
 
-              
+        #print('Constructor Activado')        
     def getNombre(self):#este metodo o funcion es para ver la informacion 
         t=self.__tipo1                                                   #guardo tipo1 en t
         c=self.__cedu1                                                   #guardo cedu1 en c
@@ -60,12 +60,13 @@ class Aprendiz(Persona1):#aca creo otra calse llamada aprendiz con eredacion de 
         nombre1=self.__nombre1      #guarsdo el __nombre1 en nombre1 para asi no imprimir __nombre1
         
         print(nombre1,"cambio de numero de ficha que era :", ficha2,"a la siguente :",self.__ficha)
-        sena="gracias por estar en el sena "
-        return sena
+        sena1="gracias por estar en el sena "
+        print(sena1)
         #print("2")
     
-    
- 
+""""
+class profesor(Persona1,Aprendiz):
+    pass"""
       
 
 app=Aprendiz("12345A","Ana","ti",133)
@@ -75,4 +76,6 @@ app.setficha("12b","Ana")
 
 ob2=Aprendiz("445677a",'Maria',"ti",123)
 print()
-#ob2.getNombre()
+ob2.getNombre()
+
+print(isinstance(app,Aprendiz))

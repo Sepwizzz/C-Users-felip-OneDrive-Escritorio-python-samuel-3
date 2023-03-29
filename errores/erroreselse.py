@@ -8,12 +8,12 @@ def numerop6():
     except AssertionError:
         print("profavor ponga un adulto")
     except ValueError:
-        print("ponga un numero numerico")
+        print("ponga un numero entero")
         numerop6()
     else:
-        return
+        return "gracias"
     
-#numerop6()
+print(numerop6())
 
 def numerosproi1():
     try: 
@@ -33,4 +33,4 @@ def numerosproi1():
         print("gracias")
 
 
-numerosproi1()
+#numerosproi1()

@@ -27,7 +27,7 @@ class producto:                                             #creop la clase prod
         return self.__producto
     
 
-    def cuntoiva(self):                                                 # linea 30 a la 35 metodo para saber le iva 
+    def cuntoiva(self):                                                           # linea 30 a la 35 metodo para saber le iva 
         
         print("cunato iva por el producto")
         i=self.__precio*0.19
